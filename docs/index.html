@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b0f16">
+<title>节点订阅面板</title>
+<style>
+  :root{
+    --bg:#0b0f16; --card:#141a24; --card2:#1a2230; --line:#243040;
+    --txt:#e8eef7; --sub:#8fa1b8; --acc:#39d98a; --acc2:#4c8dff;
+    --warn:#f5c451; --bad:#f0625c; --radius:14px;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#f4f7fb; --card:#fff; --card2:#f0f4fa; --line:#dde6f2;
+           --txt:#111a26; --sub:#5c6b80; }
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  body{
+    margin:0;padding:16px 14px 40px;background:var(--bg);color:var(--txt);
+    font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",
+    "Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    max-width:760px;margin-inline:auto;
+  }
+  h1{font-size:20px;margin:4px 0 2px;letter-spacing:.2px}
+  .muted{color:var(--sub);font-size:13px}
+  .row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .dot{width:9px;height:9px;border-radius:50%;background:var(--sub);flex:none;
+       box-shadow:0 0 0 3px rgba(57,217,138,.12)}
+  .dot.ok{background:var(--acc)} .dot.warn{background:var(--warn)} .dot.bad{background:var(--bad)}
+
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:14px 0 6px}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:12px;
+        padding:10px 8px;text-align:center}
+  .stat b{display:block;font-size:18px;line-height:1.2}
+  .stat span{font-size:11px;color:var(--sub)}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+        padding:14px;margin:12px 0}
+  .card h2{font-size:15px;margin:0 0 2px;display:flex;align-items:center;gap:6px}
+  .tag{font-size:11px;padding:1px 7px;border-radius:99px;background:var(--card2);
+       color:var(--sub);border:1px solid var(--line);font-weight:400}
+  .tag.rec{color:#062;background:#b8f5d4;border-color:#8ae8bb}
+  @media (prefers-color-scheme: dark){ .tag.rec{color:#a8ffd4;background:#14351f;border-color:#2a5c3c} }
+
+  .tabs{display:flex;gap:6px;margin:10px 0 8px;overflow-x:auto;padding-bottom:2px}
+  .tab{padding:5px 10px;border-radius:99px;font-size:11.5px;border:1px solid var(--line);
+       background:transparent;color:var(--sub);white-space:nowrap;cursor:pointer}
+  .tab.on{background:var(--acc2);border-color:var(--acc2);color:#fff}
+
+  .urlbox{display:flex;gap:8px;align-items:stretch}
+  .url{flex:1;min-width:0;font:12px/1.45 ui-monospace,SFMono-Regular,Menlo,monospace;
+       background:var(--card2);border:1px solid var(--line);border-radius:10px;
+       padding:10px;word-break:break-all;color:var(--txt);user-select:all}
+  .btn{border:0;border-radius:10px;padding:0 14px;background:var(--acc);color:#062;
+       font-weight:600;font-size:13px;cursor:pointer;white-space:nowrap}
+  .btn:active{transform:scale(.97)}
+  .btn.ghost{background:var(--card2);color:var(--txt);border:1px solid var(--line);font-weight:400}
+
+  details{margin-top:10px}
+  summary{cursor:pointer;font-size:13px;color:var(--sub);outline:none}
+  .ol{margin:10px 0 0;padding-left:18px;font-size:13.5px;color:var(--sub)}
+  .ol li{margin:5px 0}
+  .ol b{color:var(--txt);font-weight:600}
+  code{background:var(--card2);padding:1px 5px;border-radius:5px;font-size:12.5px}
+
+  .toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);
+         background:var(--acc);color:#062;padding:9px 18px;border-radius:99px;font-size:13px;
+         font-weight:600;opacity:0;pointer-events:none;transition:.22s;z-index:9}
+  .toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+
+  .notice{font-size:12.5px;color:var(--sub);border-left:2px solid var(--warn);
+          padding:2px 0 2px 10px;margin:12px 0}
+  a{color:var(--acc2)}
+  footer{margin-top:22px;text-align:center;font-size:12px;color:var(--sub)}
+</style>
+</head>
+<body>
+
+<div class="row">
+  <span class="dot" id="dot"></span>
+  <h1 style="flex:1">节点订阅</h1>
+</div>
+<div class="muted" id="updated">正在读取状态…</div>
+
+<div class="stats">
+  <div class="stat"><b id="s-all">–</b><span>节点总数</span></div>
+  <div class="stat"><b id="s-us">–</b><span>美国</span></div>
+  <div class="stat"><b id="s-home">–</b><span>美国家宽</span></div>
+  <div class="stat"><b id="s-native">–</b><span>美国原生</span></div>
+</div>
+
+<div id="list"></div>
+
+<div class="card">
+  <h2>⚡ 加速线路（拉不到就用这个）</h2>
+  <div class="muted">如果上面地址在手机上一更新就报错，把订阅地址换成下面任意一条。</div>
+  <div class="tabs" id="mirrorTabs">
+    <button class="tab on" data-m="pages">GitHub Pages</button>
+    <button class="tab" data-m="jsdelivr">jsDelivr</button>
+    <button class="tab" data-m="ghproxy">ghproxy</button>
+    <button class="tab" data-m="raw">raw</button>
+    <button class="tab" data-m="worker">自建中转</button>
+  </div>
+  <div id="mirrorHint" class="muted">点上面的按钮切换线路，下面的地址会跟着变。</div>
+  <div style="margin-top:10px" class="urlbox">
+    <div class="url" id="workerInput" contenteditable="true"
+         style="min-height:42px">https://你的worker名.workers.dev</div>
+    <button class="btn ghost" onclick="saveWorker()">保存</button>
+  </div>
+</div>
+
+<div class="card">
+  <h2>📱 怎么导入</h2>
+  <details open>
+    <summary>Clash Verge / FlClash / Mihomo / Stash（安卓、iOS、电脑）</summary>
+    <ol class="ol">
+      <li>复制上面<b>完整版</b>的地址</li>
+      <li>打开 App → <b>订阅 / Profiles</b> → 右上角 <b>+</b> 或「从链接导入」</li>
+      <li>粘贴地址 → 确定 → 点一下刚出现的订阅把它启用</li>
+      <li>回到首页，<b>节点选择</b>选「🚀 节点选择」，然后开始用</li>
+    </ol>
+  </details>
+  <details>
+    <summary>NekoBox / sing-box（安卓）</summary>
+    <ol class="ol">
+      <li>复制 <b>sing-box</b> 那一条地址</li>
+      <li>NekoBox → 左上角菜单 → <b>订阅</b> → 新建 → 粘贴 → 保存</li>
+      <li>点订阅条目更新一次，然后选节点</li>
+    </ol>
+  </details>
+  <details>
+    <summary>v2rayN（只想要链接列表）</summary>
+    <ol class="ol">
+      <li>复制 <b>base64</b> 那条地址</li>
+      <li>v2rayN → 订阅 → 订阅设置 → 添加 → 粘贴</li>
+    </ol>
+  </details>
+</div>
+
+<div class="notice">
+  节点来自公开免费源，寿命通常几小时到几天，断了是正常的 —— 订阅每 3 小时自动换一批，
+  你不用手动改地址。遇到大面积超时，隔一轮再更新一次。
+</div>
+
+<footer id="foot">订阅每 3 小时自动更新</footer>
+<div class="toast" id="toast">已复制</div>
+
+<script>
+const FILES = [
+  { id:'clash',        file:'clash.yaml',        name:'完整版', tag:'推荐', desc:'带分组、DNS、分流规则。日常用这个。' },
+  { id:'clash-lite',   file:'clash-lite.yaml',   name:'精简版', tag:'',     desc:'只有节点和两个组，老客户端 / 加载慢时用。' },
+  { id:'clash-ascii',  file:'clash-ascii.yaml',  name:'兼容版', tag:'',     desc:'节点名纯英文，老客户端不认 emoji 时用。' },
+  { id:'singbox',      file:'singbox.json',      name:'sing-box', tag:'',   desc:'NekoBox / Hiddify / sing-box 用。' },
+  { id:'base64',       file:'base64.txt',        name:'base64', tag:'',     desc:'v2rayN 等只吃链接列表的客户端。' },
+];
+
+let META = { repo:'', builder:'' };
+let MIRROR = 'pages';
+
+function $(id){ return document.getElementById(id); }
+
+function repoParts(){
+  const m = (META.repo || '').split('/');
+  return { user: m[0] || '', name: m[1] || '' };
+}
+
+function base(kind){
+  const { user, name } = repoParts();
+  const w = localStorage.getItem('workerBase');
+  switch(kind){
+    case 'jsdelivr': return `https://cdn.jsdelivr.net/gh/${user}/${name}@main/docs/sub/`;
+    case 'ghproxy':  return `https://ghproxy.net/https://raw.githubusercontent.com/${user}/${name}/main/docs/sub/`;
+    case 'raw':      return `https://raw.githubusercontent.com/${user}/${name}/main/docs/sub/`;
+    case 'worker':   return (w || 'https://你的worker名.workers.dev') + '/';
+    default:         return `https://${user}.github.io/${name}/sub/`;
+  }
+}
+
+function urlFor(f){
+  if (MIRROR === 'worker') return workerUrlFor(f);
+  return base(MIRROR) + f;
+}
+
+function workerUrlFor(f){
+  const b = (localStorage.getItem('workerBase') || 'https://你的worker名.workers.dev').replace(/\/+$/,'');
+  const map = { 'clash.yaml':'/clash', 'clash-lite.yaml':'/clash-lite',
+                'clash-ascii.yaml':'/clash-ascii', 'singbox.json':'/singbox', 'base64.txt':'/base64' };
+  return b + (map[f] || '/' + f);
+}
+
+function copy(text){
+  const done = () => { const t = $('toast'); t.classList.add('on'); setTimeout(()=>t.classList.remove('on'), 1300); };
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done).catch(()=>fallback(text, done));
+  } else fallback(text, done);
+}
+
+function fallback(text, done){
+  const ta = document.createElement('textarea');
+  ta.value = text; ta.style.position='fixed'; ta.style.opacity='0';
+  document.body.appendChild(ta); ta.select();
+  try { document.execCommand('copy'); done(); } catch(e){ alert('复制失败，请长按地址手动复制'); }
+  document.body.removeChild(ta);
+}
+
+function render(){
+  const list = $('list');
+  list.innerHTML = '';
+  FILES.forEach(f => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `
+      <h2>${f.name} ${f.tag ? `<span class="tag rec">${f.tag}</span>` : ''}
+        <span class="tag">${f.file.split('.').pop()}</span></h2>
+      <div class="muted">${f.desc}</div>
+      <div class="urlbox" style="margin-top:10px">
+        <div class="url" data-file="${f.file}"></div>
+        <button class="btn">复制</button>
+      </div>`;
+    const box = card.querySelector('.url');
+    box.textContent = MIRROR === 'worker' ? workerUrlFor(f.file) : urlFor(f.file);
+    card.querySelector('.btn').addEventListener('click', () => copy(box.textContent));
+    list.appendChild(card);
+  });
+}
+
+function saveWorker(){
+  const v = $('workerInput').textContent.trim().replace(/\/+$/,'');
+  if (!/^https?:\/\//.test(v)) { alert('地址要以 https:// 开头'); return; }
+  localStorage.setItem('workerBase', v);
+  alert('已保存，切到「自建中转」就能看到地址');
+  if (MIRROR === 'worker') render();
+}
+
+async function boot(){
+  try {
+    const r = await fetch('meta.json?t=' + Date.now(), { cache:'no-store' });
+    META = await r.json();
+  } catch(e) {
+    META = { repo: location.hostname.endsWith('github.io')
+      ? location.hostname.replace('.github.io','') + '/' + (location.pathname.split('/')[1] || '')
+      : '' };
+  }
+  // Pages 上就信域名推断（永远是对的），别被旧 meta 里的占位仓库名带跑
+  const host = location.hostname;
+  if (host.endsWith('.github.io')) {
+    const seg = location.pathname.split('/').filter(Boolean)[0];
+    if (seg) META.repo = host.replace('.github.io','') + '/' + seg;
+  }
+  if (!META.repo || !META.repo.includes('/')) META.repo = '你的用户名/你的仓库名';
+
+  $('s-all').textContent = META.count ?? '–';
+  $('s-us').textContent = META.us ?? '–';
+  $('s-home').textContent = META.us_home ?? '–';
+  $('s-native').textContent = META.us_native ?? '–';
+
+  const t = META.generated_at;
+  const ts = META.generated_ts ? META.generated_ts * 1000
+             : Date.parse((t || '').replace(' ', 'T') + 'Z');
+  const hours = isNaN(ts) ? 999 : (Date.now() - ts) / 3600000;
+  const dot = $('dot');
+  if (hours < 6) dot.className = 'dot ok';
+  else if (hours < 30) dot.className = 'dot warn';
+  else dot.className = 'dot bad';
+
+  $('updated').textContent = t
+    ? `最后更新 ${t} UTC · ${hours < 1 ? '刚刚' : Math.round(hours) + ' 小时前'} · 源成功 ${META.sources_ok ?? '–'}/${META.sources_total ?? '–'}`
+    : '还没有更新记录';
+
+  if (hours > 30) {
+    $('updated').textContent += ' · 已经很久没更新：去仓库 Actions 页面点一次 Run workflow';
+  }
+
+  $('workerInput').textContent = localStorage.getItem('workerBase') || 'https://你的worker名.workers.dev';
+  render();
+}
+
+document.querySelectorAll('#mirrorTabs .tab').forEach(t => {
+  t.addEventListener('click', () => {
+    document.querySelectorAll('#mirrorTabs .tab').forEach(x => x.classList.remove('on'));
+    t.classList.add('on');
+    MIRROR = t.dataset.m;
+    $('mirrorHint').textContent = MIRROR === 'pages'
+      ? 'GitHub Pages：最稳，但部分国内网络打不开。'
+      : MIRROR === 'jsdelivr' ? 'jsDelivr：国内一般能通，有几分钟缓存。'
+      : MIRROR === 'ghproxy' ? 'ghproxy：第三方加速，偶尔限速。'
+      : MIRROR === 'raw' ? 'raw：GitHub 官方源，国内多数打不开。'
+      : '自建中转：在 Cloudflare 免费部署 worker.js 后，把地址填在上面保存。需要先看 README。';
+    render();
+  });
+});
+
+boot();
+</script>
+</body>
+</html>
