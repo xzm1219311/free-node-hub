@@ -1,74 +1,85 @@
 {
   "title": "node-sub",
   "repo": "xzm1219311/free-node-hub",
-  "generated_at": "2026-11-27 19:20:33",
-  "generated_ts": 1795807233,
+  "generated_at": "2026-11-27 22:15:28",
+  "generated_ts": 1795817728,
   "tz": "UTC",
   "count": 600,
-  "us": 326,
-  "us_home": 20,
-  "us_suspected": 3,
+  "us": 221,
+  "us_home": 13,
+  "us_suspected": 9,
   "us_native": 22,
-  "vpngate": 97,
+  "vpngate": 95,
   "sources_ok": 39,
   "sources_total": 50,
   "by_country": {
-    "US": 326,
-    "CA": 75,
-    "NL": 22,
-    "DE": 20,
-    "SG": 16,
-    "FR": 15,
-    "HK": 10,
-    "CH": 9,
-    "TR": 9,
-    "KZ": 7,
-    "RU": 7,
+    "CA": 231,
+    "US": 221,
+    "NL": 15,
+    "FR": 14,
+    "SG": 14,
+    "CN": 12,
+    "DE": 11,
+    "HK": 7,
     "GB": 7,
-    "ES": 6,
-    "JP": 5,
-    "KR": 4,
-    "TW": 4,
-    "PL": 4,
+    "KR": 5,
+    "KZ": 5,
+    "TW": 5,
     "SE": 4,
-    "RO": 4,
-    "IR": 4,
-    "FI": 3,
-    "AL": 3,
-    "PH": 2,
-    "TH": 2,
+    "TR": 4,
+    "ES": 4,
+    "CH": 3,
+    "RU": 3,
+    "JP": 3,
+    "PL": 2,
     "MN": 2,
-    "IN": 2,
+    "TH": 2,
     "KW": 2,
     "AU": 2,
     "AT": 2,
-    "LV": 2
+    "SC": 2,
+    "UZ": 1,
+    "MX": 1,
+    "DO": 1,
+    "CZ": 1,
+    "PH": 1
   },
   "by_type": {
-    "vless": 167,
-    "trojan": 161,
-    "ss": 138,
-    "vmess": 96,
-    "http": 17,
-    "socks5": 8,
+    "vmess": 337,
+    "vless": 108,
+    "ss": 72,
+    "trojan": 50,
+    "http": 15,
+    "socks5": 6,
     "anytls": 6,
-    "hysteria2": 4,
-    "ssr": 3
+    "ssr": 3,
+    "hysteria2": 3
   },
   "top": [
     {
-      "name": "🇺🇸 US · 家宽·原生 | GTHost | 01",
+      "name": "🇺🇸 US · 家宽·原生 | Ipxo LLC | 01",
       "type": "trojan",
-      "server": "216.106.186.46",
+      "server": "sclass-c2.catcat321.com",
       "country": "US",
-      "isp": "GTHost",
+      "isp": "Ipxo LLC",
       "residential": true,
       "suspected": false,
       "native": true,
-      "ms": 10
+      "ms": 29
     },
     {
-      "name": "🇺🇸 US · 家宽·原生 | NetLab Global | 02",
+      "name": "🇺🇸 US · 家宽·原生 | Ipxo LLC | 02",
+      "type": "trojan",
+      "server": "sclass-01.catcat321.com",
+      "country": "US",
+      "isp": "Ipxo LLC",
+      "residential": true,
+      "suspected": false,
+      "native": true,
+      "ms": 29
+    },
+    {
+      "name": "🇺🇸 US · 家宽·原生 | NetLab Global | 03",
       "type": "vless",
       "server": "199.7.140.201",
       "country": "US",
@@ -76,62 +87,51 @@
       "residential": true,
       "suspected": false,
       "native": true,
-      "ms": 30
+      "ms": 31
     },
     {
-      "name": "🇺🇸 US · 家宽·原生 | Enzu Inc | 03",
+      "name": "🇺🇸 US · 家宽·原生 | 2E TELEKOMUNIKASYO | 04",
       "type": "vless",
-      "server": "38.145.220.193",
+      "server": "179.254.94.184",
       "country": "US",
-      "isp": "Enzu Inc",
+      "isp": "2E TELEKOMUNIKASYON LTD STI",
       "residential": true,
       "suspected": false,
       "native": true,
-      "ms": 33
+      "ms": 31
     },
     {
-      "name": "🇺🇸 US · 家宽·原生 | Ipxo LLC | 04",
-      "type": "trojan",
-      "server": "157.254.38.210",
-      "country": "US",
-      "isp": "Ipxo LLC",
-      "residential": true,
-      "suspected": false,
-      "native": true,
-      "ms": 37
-    },
-    {
-      "name": "🇺🇸 US · 家宽·原生 | G-Core Labs S.A. | 05",
-      "type": "vless",
-      "server": "176.126.122.168",
-      "country": "US",
-      "isp": "G-Core Labs S.A.",
-      "residential": true,
-      "suspected": false,
-      "native": true,
-      "ms": 46
-    },
-    {
-      "name": "🇺🇸 US · 家宽·原生 | GTHost | 06",
-      "type": "ss",
-      "server": "38.99.82.34",
+      "name": "🇺🇸 US · 家宽·原生 | GTHost | 05",
+      "type": "vmess",
+      "server": "aidrivercat.org",
       "country": "US",
       "isp": "GTHost",
       "residential": true,
       "suspected": false,
       "native": true,
-      "ms": 67
+      "ms": 54
     },
     {
-      "name": "🇺🇸 US · 家宽·原生 | G-Core Labs S.A. | 07",
-      "type": "vless",
-      "server": "crewmen-grittier.freevideochats.org",
+      "name": "🇺🇸 US · 家宽·原生 | Ipxo LLC | 06",
+      "type": "trojan",
+      "server": "sclass-01.catcat321.com",
       "country": "US",
-      "isp": "G-Core Labs S.A.",
+      "isp": "Ipxo LLC",
       "residential": true,
       "suspected": false,
       "native": true,
-      "ms": 74
+      "ms": 63
+    },
+    {
+      "name": "🇺🇸 US · 家宽·原生 | FiberState LLC | 07",
+      "type": "vmess",
+      "server": "us-23.hihu.net",
+      "country": "US",
+      "isp": "FiberState, LLC",
+      "residential": true,
+      "suspected": false,
+      "native": true,
+      "ms": 64
     },
     {
       "name": "🇺🇸 US · 家宽·原生 | Back Waves Limited | 08",
@@ -142,65 +142,43 @@
       "residential": true,
       "suspected": false,
       "native": true,
-      "ms": 85
+      "ms": 66
     },
     {
-      "name": "🇺🇸 US · 家宽·原生 | G-Core Labs S.A. | 09",
-      "type": "vless",
-      "server": "hiccuped-tacos.sports-streams.org",
+      "name": "🇺🇸 US · 家宽·原生 | Ipxo LLC | 09",
+      "type": "trojan",
+      "server": "sclass-01.catcat321.com",
       "country": "US",
-      "isp": "G-Core Labs S.A.",
+      "isp": "Ipxo LLC",
       "residential": true,
       "suspected": false,
       "native": true,
-      "ms": 85
+      "ms": 67
     },
     {
       "name": "🇺🇸 US · 家宽·原生 | Ipxo LLC | 10",
       "type": "trojan",
-      "server": "sclass-b1.catcat321.com",
-      "country": "US",
-      "isp": "Ipxo LLC",
-      "residential": true,
-      "suspected": false,
-      "native": true,
-      "ms": 101
-    },
-    {
-      "name": "🇺🇸 US · 家宽·原生 | Ipxo LLC | 11",
-      "type": "trojan",
       "server": "sclass-01.catcat321.com",
       "country": "US",
       "isp": "Ipxo LLC",
       "residential": true,
       "suspected": false,
       "native": true,
-      "ms": 102
+      "ms": 110
     },
     {
-      "name": "🇺🇸 US · 家宽·原生 | Ipxo LLC | 12",
-      "type": "trojan",
-      "server": "sclass-01.catcat321.com",
+      "name": "🇺🇸 US · 家宽·原生 | NTT America Inc. | 11",
+      "type": "vless",
+      "server": "198.247.127.131",
       "country": "US",
-      "isp": "Ipxo LLC",
+      "isp": "NTT America, Inc.",
       "residential": true,
       "suspected": false,
       "native": true,
-      "ms": 104
+      "ms": 130
     },
     {
-      "name": "🇺🇸 US · 家宽·原生 | Ipxo LLC | 13",
-      "type": "trojan",
-      "server": "sclass-01.catcat321.com",
-      "country": "US",
-      "isp": "Ipxo LLC",
-      "residential": true,
-      "suspected": false,
-      "native": true,
-      "ms": 104
-    },
-    {
-      "name": "🇺🇸 US · 家宽·原生 | Trellian Pty. Limi | 14",
+      "name": "🇺🇸 US · 家宽·原生 | Trellian Pty. Limi | 12",
       "type": "vmess",
       "server": "odelia.autos",
       "country": "US",
@@ -208,21 +186,10 @@
       "residential": true,
       "suspected": false,
       "native": true,
-      "ms": 106
+      "ms": 135
     },
     {
-      "name": "🇺🇸 US · 家宽·原生 | 2E TELEKOMUNIKASYO | 15",
-      "type": "vless",
-      "server": "179.254.94.184",
-      "country": "US",
-      "isp": "2E TELEKOMUNIKASYON LTD STI",
-      "residential": true,
-      "suspected": false,
-      "native": true,
-      "ms": 107
-    },
-    {
-      "name": "🇺🇸 US · 家宽·原生 | Ipxo LLC | 16",
+      "name": "🇺🇸 US · 家宽·原生 | Ipxo LLC | 13",
       "type": "trojan",
       "server": "sclass-c2.catcat321.com",
       "country": "US",
@@ -230,51 +197,84 @@
       "residential": true,
       "suspected": false,
       "native": true,
-      "ms": 128
+      "ms": 225
     },
     {
-      "name": "🇺🇸 US · 家宽·原生 | FiberState LLC | 17",
+      "name": "🇺🇸 US · 疑似家宽·原生 | TELUS Communicatio | 14",
       "type": "vmess",
-      "server": "us-23.hihu.net",
+      "server": "142.171.48.179",
       "country": "US",
-      "isp": "FiberState, LLC",
-      "residential": true,
-      "suspected": false,
+      "isp": "TELUS Communications Inc",
+      "residential": false,
+      "suspected": true,
       "native": true,
-      "ms": 132
+      "ms": 25
     },
     {
-      "name": "🇺🇸 US · 家宽·原生 | Ipxo LLC | 18",
-      "type": "trojan",
-      "server": "sclass-c2.catcat321.com",
+      "name": "🇺🇸 US · 疑似家宽·原生 | TELUS Communicatio | 15",
+      "type": "vmess",
+      "server": "142.171.48.179",
       "country": "US",
-      "isp": "Ipxo LLC",
-      "residential": true,
-      "suspected": false,
+      "isp": "TELUS Communications Inc",
+      "residential": false,
+      "suspected": true,
       "native": true,
-      "ms": 158
+      "ms": 25
     },
     {
-      "name": "🇺🇸 US · 家宽·原生 | Ipxo LLC | 19",
-      "type": "trojan",
-      "server": "sclass-01.catcat321.com",
+      "name": "🇺🇸 US · 疑似家宽·原生 | TELUS Communicatio | 16",
+      "type": "vmess",
+      "server": "142.171.48.179",
       "country": "US",
-      "isp": "Ipxo LLC",
-      "residential": true,
-      "suspected": false,
+      "isp": "TELUS Communications Inc",
+      "residential": false,
+      "suspected": true,
       "native": true,
-      "ms": 171
+      "ms": 25
     },
     {
-      "name": "🇺🇸 US · 家宽 | NCR Voyix Corporat | 20",
-      "type": "hysteria2",
-      "server": "135.126.21.107",
+      "name": "🇺🇸 US · 疑似家宽·原生 | TELUS Communicatio | 17",
+      "type": "vmess",
+      "server": "142.171.48.179",
       "country": "US",
-      "isp": "NCR Voyix Corporation",
-      "residential": true,
-      "suspected": false,
-      "native": false,
-      "ms": 156
+      "isp": "TELUS Communications Inc",
+      "residential": false,
+      "suspected": true,
+      "native": true,
+      "ms": 25
+    },
+    {
+      "name": "🇺🇸 US · 疑似家宽·原生 | TELUS Communicatio | 18",
+      "type": "vmess",
+      "server": "142.171.48.179",
+      "country": "US",
+      "isp": "TELUS Communications Inc",
+      "residential": false,
+      "suspected": true,
+      "native": true,
+      "ms": 26
+    },
+    {
+      "name": "🇺🇸 US · 疑似家宽·原生 | TELUS Communicatio | 19",
+      "type": "vmess",
+      "server": "142.171.48.179",
+      "country": "US",
+      "isp": "TELUS Communications Inc",
+      "residential": false,
+      "suspected": true,
+      "native": true,
+      "ms": 26
+    },
+    {
+      "name": "🇺🇸 US · 疑似家宽·原生 | TELUS Communicatio | 20",
+      "type": "vmess",
+      "server": "142.171.48.179",
+      "country": "US",
+      "isp": "TELUS Communications Inc",
+      "residential": false,
+      "suspected": true,
+      "native": true,
+      "ms": 26
     },
     {
       "name": "🇺🇸 US · 疑似家宽·原生 | TELUS Communicatio | 21",
@@ -285,54 +285,32 @@
       "residential": false,
       "suspected": true,
       "native": true,
-      "ms": 32
+      "ms": 26
     },
     {
-      "name": "🇺🇸 US · 疑似家宽·原生 | Psychz Networks | 22",
-      "type": "ss",
-      "server": "108.181.88.2",
+      "name": "🇺🇸 US · 疑似家宽·原生 | TELUS Communicatio | 22",
+      "type": "vmess",
+      "server": "142.171.48.179",
       "country": "US",
-      "isp": "Psychz Networks",
+      "isp": "TELUS Communications Inc",
       "residential": false,
       "suspected": true,
       "native": true,
-      "ms": 53
+      "ms": 26
     },
     {
-      "name": "🇺🇸 US · 疑似家宽·原生 | Psychz Networks | 23",
-      "type": "ss",
-      "server": "108.181.133.130",
+      "name": "🇺🇸 US · vmess | PEG TECH INC | 23",
+      "type": "vmess",
+      "server": "198.2.204.51",
       "country": "US",
-      "isp": "Psychz Networks",
-      "residential": false,
-      "suspected": true,
-      "native": true,
-      "ms": 68
-    },
-    {
-      "name": "🇺🇸 US · trojan | GTHost | 24",
-      "type": "trojan",
-      "server": "216.106.186.66",
-      "country": "US",
-      "isp": "GTHost",
+      "isp": "PEG TECH INC",
       "residential": false,
       "suspected": false,
       "native": false,
-      "ms": 6
+      "ms": 21
     },
     {
-      "name": "🇺🇸 US · trojan | GTHost | 25",
-      "type": "trojan",
-      "server": "216.106.186.66",
-      "country": "US",
-      "isp": "GTHost",
-      "residential": false,
-      "suspected": false,
-      "native": false,
-      "ms": 14
-    },
-    {
-      "name": "🇺🇸 US · vmess | PEG TECH INC | 26",
+      "name": "🇺🇸 US · vmess | PEG TECH INC | 24",
       "type": "vmess",
       "server": "137.175.32.91",
       "country": "US",
@@ -340,12 +318,67 @@
       "residential": false,
       "suspected": false,
       "native": false,
-      "ms": 26
+      "ms": 21
     },
     {
-      "name": "🇺🇸 US · vmess | PEG TECH INC | 27",
+      "name": "🇺🇸 US · vmess | tzulo inc. | 25",
       "type": "vmess",
-      "server": "198.2.204.51",
+      "server": "173.249.198.111",
+      "country": "US",
+      "isp": "tzulo, inc.",
+      "residential": false,
+      "suspected": false,
+      "native": false,
+      "ms": 23
+    },
+    {
+      "name": "🇺🇸 US · http | M247 Europe SRL | 26",
+      "type": "http",
+      "server": "38.95.111.226",
+      "country": "US",
+      "isp": "M247 Europe SRL",
+      "residential": false,
+      "suspected": false,
+      "native": false,
+      "ms": 24
+    },
+    {
+      "name": "🇺🇸 US · ss | GTHost | 27",
+      "type": "ss",
+      "server": "23.150.152.38",
+      "country": "US",
+      "isp": "GTHost",
+      "residential": false,
+      "suspected": false,
+      "native": false,
+      "ms": 25
+    },
+    {
+      "name": "🇺🇸 US · vless | Multacom Corporati | 28",
+      "type": "vless",
+      "server": "148.135.86.162",
+      "country": "US",
+      "isp": "Multacom Corporation",
+      "residential": false,
+      "suspected": false,
+      "native": false,
+      "ms": 25
+    },
+    {
+      "name": "🇺🇸 US · vmess | Multacom Corporati | 29",
+      "type": "vmess",
+      "server": "148.135.33.140",
+      "country": "US",
+      "isp": "Multacom Corporation",
+      "residential": false,
+      "suspected": false,
+      "native": false,
+      "ms": 25
+    },
+    {
+      "name": "🇺🇸 US · vmess | PEG TECH INC | 30",
+      "type": "vmess",
+      "server": "192.74.236.148",
       "country": "US",
       "isp": "PEG TECH INC",
       "residential": false,
@@ -354,106 +387,18 @@
       "ms": 27
     },
     {
-      "name": "🇺🇸 US · http | M247 Europe SRL | 28",
-      "type": "http",
-      "server": "38.95.111.226",
-      "country": "US",
-      "isp": "M247 Europe SRL",
-      "residential": false,
-      "suspected": false,
-      "native": false,
-      "ms": 30
-    },
-    {
-      "name": "🇺🇸 US · vmess | tzulo inc. | 29",
-      "type": "vmess",
-      "server": "173.249.198.111",
-      "country": "US",
-      "isp": "tzulo, inc.",
-      "residential": false,
-      "suspected": false,
-      "native": false,
-      "ms": 32
-    },
-    {
-      "name": "🇺🇸 US · vmess | Multacom Corporati | 30",
-      "type": "vmess",
-      "server": "148.135.33.140",
-      "country": "US",
-      "isp": "Multacom Corporation",
-      "residential": false,
-      "suspected": false,
-      "native": false,
-      "ms": 32
-    },
-    {
-      "name": "🇺🇸 US · socks5 | GTT Americas | 31",
-      "type": "socks5",
-      "server": "66.253.2.69",
-      "country": "US",
-      "isp": "GTT Americas",
-      "residential": false,
-      "suspected": false,
-      "native": false,
-      "ms": 33
-    },
-    {
-      "name": "🇺🇸 US · trojan | GTHost | 32",
+      "name": "🇺🇸 US · trojan | GTHost | 31",
       "type": "trojan",
-      "server": "blog.findlocaljobnetworkandbuildcommunityconnections.com",
+      "server": "resources.findlocaljobnetworkandbuildcommunityconnections.com",
       "country": "US",
       "isp": "GTHost",
       "residential": false,
       "suspected": false,
       "native": false,
-      "ms": 33
+      "ms": 37
     },
     {
-      "name": "🇺🇸 US · ss | GTHost | 33",
-      "type": "ss",
-      "server": "23.150.152.38",
-      "country": "US",
-      "isp": "GTHost",
-      "residential": false,
-      "suspected": false,
-      "native": false,
-      "ms": 35
-    },
-    {
-      "name": "🇺🇸 US · vmess | PEG TECH INC | 34",
-      "type": "vmess",
-      "server": "192.74.236.148",
-      "country": "US",
-      "isp": "PEG TECH INC",
-      "residential": false,
-      "suspected": false,
-      "native": false,
-      "ms": 35
-    },
-    {
-      "name": "🇺🇸 US · ss | Dedicated.com | 35",
-      "type": "ss",
-      "server": "14.1.28.76",
-      "country": "US",
-      "isp": "Dedicated.com",
-      "residential": false,
-      "suspected": false,
-      "native": false,
-      "ms": 35
-    },
-    {
-      "name": "🇺🇸 US · vless | Multacom Corporati | 36",
-      "type": "vless",
-      "server": "148.135.86.162",
-      "country": "US",
-      "isp": "Multacom Corporation",
-      "residential": false,
-      "suspected": false,
-      "native": false,
-      "ms": 38
-    },
-    {
-      "name": "🇺🇸 US · ss | GTHost | 37",
+      "name": "🇺🇸 US · ss | GTHost | 32",
       "type": "ss",
       "server": "216.106.178.169",
       "country": "US",
@@ -461,10 +406,21 @@
       "residential": false,
       "suspected": false,
       "native": false,
-      "ms": 50
+      "ms": 55
     },
     {
-      "name": "🇺🇸 US · ss | GTHost | 38",
+      "name": "🇺🇸 US · socks5 | GTT Americas | 33",
+      "type": "socks5",
+      "server": "66.253.2.69",
+      "country": "US",
+      "isp": "GTT Americas",
+      "residential": false,
+      "suspected": false,
+      "native": false,
+      "ms": 56
+    },
+    {
+      "name": "🇺🇸 US · ss | GTHost | 34",
       "type": "ss",
       "server": "38.121.43.18",
       "country": "US",
@@ -472,76 +428,10 @@
       "residential": false,
       "suspected": false,
       "native": false,
-      "ms": 59
-    },
-    {
-      "name": "🇺🇸 US · trojan | GTHost | 39",
-      "type": "trojan",
-      "server": "216.152.156.159",
-      "country": "US",
-      "isp": "GTHost",
-      "residential": false,
-      "suspected": false,
-      "native": false,
-      "ms": 59
-    },
-    {
-      "name": "🇺🇸 US · trojan | GTHost | 40",
-      "type": "trojan",
-      "server": "216.152.156.49",
-      "country": "US",
-      "isp": "GTHost",
-      "residential": false,
-      "suspected": false,
-      "native": false,
-      "ms": 59
-    },
-    {
-      "name": "🇺🇸 US · trojan | GTHost | 41",
-      "type": "trojan",
-      "server": "216.152.156.65",
-      "country": "US",
-      "isp": "GTHost",
-      "residential": false,
-      "suspected": false,
-      "native": false,
-      "ms": 59
-    },
-    {
-      "name": "🇺🇸 US · trojan | GTHost | 42",
-      "type": "trojan",
-      "server": "216.152.156.81",
-      "country": "US",
-      "isp": "GTHost",
-      "residential": false,
-      "suspected": false,
-      "native": false,
-      "ms": 59
-    },
-    {
-      "name": "🇺🇸 US · ss | GTHost | 43",
-      "type": "ss",
-      "server": "38.121.43.231",
-      "country": "US",
-      "isp": "GTHost",
-      "residential": false,
-      "suspected": false,
-      "native": false,
       "ms": 60
     },
     {
-      "name": "🇺🇸 US · ss | GTHost | 44",
-      "type": "ss",
-      "server": "38.121.43.225",
-      "country": "US",
-      "isp": "GTHost",
-      "residential": false,
-      "suspected": false,
-      "native": false,
-      "ms": 60
-    },
-    {
-      "name": "🇺🇸 US · trojan | GTHost | 45",
+      "name": "🇺🇸 US · trojan | GTHost | 35",
       "type": "trojan",
       "server": "216.152.156.212",
       "country": "US",
@@ -552,51 +442,29 @@
       "ms": 60
     },
     {
-      "name": "🇺🇸 US · ss | Cogent Communicati | 46",
+      "name": "🇺🇸 US · ss | GTHost | 36",
       "type": "ss",
-      "server": "38.22.17.129",
+      "server": "38.121.43.231",
       "country": "US",
-      "isp": "Cogent Communications",
+      "isp": "GTHost",
       "residential": false,
       "suspected": false,
       "native": false,
       "ms": 61
     },
     {
-      "name": "🇺🇸 US · ss | Cogent Communicati | 47",
+      "name": "🇺🇸 US · ss | GTHost | 37",
       "type": "ss",
-      "server": "38.22.17.219",
+      "server": "38.121.43.225",
       "country": "US",
-      "isp": "Cogent Communications",
+      "isp": "GTHost",
       "residential": false,
       "suspected": false,
       "native": false,
       "ms": 61
     },
     {
-      "name": "🇺🇸 US · ss | Cogent Communicati | 48",
-      "type": "ss",
-      "server": "38.22.17.214",
-      "country": "US",
-      "isp": "Cogent Communications",
-      "residential": false,
-      "suspected": false,
-      "native": false,
-      "ms": 61
-    },
-    {
-      "name": "🇺🇸 US · http | PEG TECH INC | 49",
-      "type": "http",
-      "server": "fan.365747.xyz",
-      "country": "US",
-      "isp": "PEG TECH INC",
-      "residential": false,
-      "suspected": false,
-      "native": false,
-      "ms": 62
-    },
-    {
-      "name": "🇺🇸 US · socks5 | Bunny Communicatio | 50",
+      "name": "🇺🇸 US · socks5 | Bunny Communicatio | 38",
       "type": "socks5",
       "server": "216.132.114.27",
       "country": "US",
@@ -607,51 +475,40 @@
       "ms": 63
     },
     {
-      "name": "🇺🇸 US · vless | OVH SAS | 51",
-      "type": "vless",
-      "server": "130.12.102.26",
-      "country": "US",
-      "isp": "OVH SAS",
-      "residential": false,
-      "suspected": false,
-      "native": false,
-      "ms": 65
-    },
-    {
-      "name": "🇺🇸 US · vless | OVH SAS | 52",
-      "type": "vless",
-      "server": "130.12.102.125",
-      "country": "US",
-      "isp": "OVH SAS",
-      "residential": false,
-      "suspected": false,
-      "native": false,
-      "ms": 65
-    },
-    {
-      "name": "🇺🇸 US · ss | Cogent Communicati | 53",
+      "name": "🇺🇸 US · ss | Cogent Communicati | 39",
       "type": "ss",
-      "server": "38.22.17.139",
+      "server": "38.22.17.129",
       "country": "US",
       "isp": "Cogent Communications",
       "residential": false,
       "suspected": false,
       "native": false,
-      "ms": 65
+      "ms": 68
     },
     {
-      "name": "🇺🇸 US · vless | GTHost | 54",
-      "type": "vless",
-      "server": "167.17.69.171",
+      "name": "🇺🇸 US · ss | Cogent Communicati | 40",
+      "type": "ss",
+      "server": "38.22.17.219",
       "country": "US",
-      "isp": "GTHost",
+      "isp": "Cogent Communications",
       "residential": false,
       "suspected": false,
       "native": false,
-      "ms": 69
+      "ms": 68
     },
     {
-      "name": "🇺🇸 US · vmess | Cogent Communicati | 55",
+      "name": "🇺🇸 US · vmess | Cogent Communicati | 41",
+      "type": "vmess",
+      "server": "38.22.17.64",
+      "country": "US",
+      "isp": "Cogent Communications",
+      "residential": false,
+      "suspected": false,
+      "native": false,
+      "ms": 68
+    },
+    {
+      "name": "🇺🇸 US · vmess | Cogent Communicati | 42",
       "type": "vmess",
       "server": "38.22.17.89",
       "country": "US",
@@ -659,43 +516,54 @@
       "residential": false,
       "suspected": false,
       "native": false,
-      "ms": 70
+      "ms": 69
     },
     {
-      "name": "🇺🇸 US · ss | GTHost | 56",
-      "type": "ss",
-      "server": "66.163.125.120",
+      "name": "🇺🇸 US · http | PEG TECH INC | 43",
+      "type": "http",
+      "server": "fan.365747.xyz",
       "country": "US",
-      "isp": "GTHost",
+      "isp": "PEG TECH INC",
       "residential": false,
       "suspected": false,
       "native": false,
       "ms": 72
     },
     {
-      "name": "🇺🇸 US · trojan | GTHost | 57",
-      "type": "trojan",
-      "server": "resources.findlocaljobnetworkandbuildcommunityconnections.com",
+      "name": "🇺🇸 US · vless | OVH SAS | 44",
+      "type": "vless",
+      "server": "130.12.102.125",
+      "country": "US",
+      "isp": "OVH SAS",
+      "residential": false,
+      "suspected": false,
+      "native": false,
+      "ms": 74
+    },
+    {
+      "name": "🇺🇸 US · vless | OVH SAS | 45",
+      "type": "vless",
+      "server": "130.12.102.26",
+      "country": "US",
+      "isp": "OVH SAS",
+      "residential": false,
+      "suspected": false,
+      "native": false,
+      "ms": 78
+    },
+    {
+      "name": "🇺🇸 US · vmess | GTHost | 46",
+      "type": "vmess",
+      "server": "66.163.125.51",
       "country": "US",
       "isp": "GTHost",
       "residential": false,
       "suspected": false,
       "native": false,
-      "ms": 88
+      "ms": 83
     },
     {
-      "name": "🇺🇸 US · vmess | Trellian Pty. Limi | 58",
-      "type": "vmess",
-      "server": "afrhms16v.bestxray.buzz",
-      "country": "US",
-      "isp": "Trellian Pty. Limited",
-      "residential": false,
-      "suspected": false,
-      "native": false,
-      "ms": 94
-    },
-    {
-      "name": "🇺🇸 US · ssr | PEG TECH INC | 59",
+      "name": "🇺🇸 US · ssr | PEG TECH INC | 47",
       "type": "ssr",
       "server": "ssr2.762988.xyz",
       "country": "US",
@@ -703,10 +571,54 @@
       "residential": false,
       "suspected": false,
       "native": false,
-      "ms": 97
+      "ms": 107
     },
     {
-      "name": "🇺🇸 US · vmess | Trellian Pty. Limi | 60",
+      "name": "🇺🇸 US · vmess | Trellian Pty. Limi | 48",
+      "type": "vmess",
+      "server": "octavi.cfd",
+      "country": "US",
+      "isp": "Trellian Pty. Limited",
+      "residential": false,
+      "suspected": false,
+      "native": false,
+      "ms": 130
+    },
+    {
+      "name": "🇺🇸 US · vmess | Trellian Pty. Limi | 49",
+      "type": "vmess",
+      "server": "glweidf.cfd",
+      "country": "US",
+      "isp": "Trellian Pty. Limited",
+      "residential": false,
+      "suspected": false,
+      "native": false,
+      "ms": 130
+    },
+    {
+      "name": "🇺🇸 US · vmess | Trellian Pty. Limi | 50",
+      "type": "vmess",
+      "server": "afrhms16v.bestxray.buzz",
+      "country": "US",
+      "isp": "Trellian Pty. Limited",
+      "residential": false,
+      "suspected": false,
+      "native": false,
+      "ms": 130
+    },
+    {
+      "name": "🇺🇸 US · vmess | Trellian Pty. Limi | 51",
+      "type": "vmess",
+      "server": "jahfkjha.cfd",
+      "country": "US",
+      "isp": "Trellian Pty. Limited",
+      "residential": false,
+      "suspected": false,
+      "native": false,
+      "ms": 134
+    },
+    {
+      "name": "🇺🇸 US · vmess | Trellian Pty. Limi | 52",
       "type": "vmess",
       "server": "hms082.gwdef.sbs",
       "country": "US",
@@ -714,7 +626,95 @@
       "residential": false,
       "suspected": false,
       "native": false,
-      "ms": 106
+      "ms": 135
+    },
+    {
+      "name": "🇰🇷 KR · 家宽·原生·移动 | Light Node Limited | 53",
+      "type": "vless",
+      "server": "130.94.30.242",
+      "country": "KR",
+      "isp": "Light Node Limited",
+      "residential": true,
+      "suspected": false,
+      "native": true,
+      "ms": 170
+    },
+    {
+      "name": "🇰🇿 KZ · 家宽·原生·移动 | Mobile Telecom-Ser | 54",
+      "type": "vmess",
+      "server": "217.76.64.195",
+      "country": "KZ",
+      "isp": "Mobile Telecom-Service LLP",
+      "residential": true,
+      "suspected": false,
+      "native": true,
+      "ms": 245
+    },
+    {
+      "name": "🏳 UZ · 家宽·原生·移动 | Unitel LLC | 55",
+      "type": "vmess",
+      "server": "37.110.209.228",
+      "country": "UZ",
+      "isp": "Unitel LLC",
+      "residential": true,
+      "suspected": false,
+      "native": true,
+      "ms": 249
+    },
+    {
+      "name": "🇺🇸 US · 机房 | Cloudflare Inc. | 56",
+      "type": "vmess",
+      "server": "141.101.114.100",
+      "country": "US",
+      "isp": "Cloudflare, Inc.",
+      "residential": false,
+      "suspected": false,
+      "native": false,
+      "ms": 6
+    },
+    {
+      "name": "🇺🇸 US · 机房 | Cloudflare Inc. | 57",
+      "type": "vmess",
+      "server": "141.101.114.120",
+      "country": "US",
+      "isp": "Cloudflare, Inc.",
+      "residential": false,
+      "suspected": false,
+      "native": false,
+      "ms": 6
+    },
+    {
+      "name": "🇺🇸 US · 机房 | Cloudflare Inc. | 58",
+      "type": "vmess",
+      "server": "141.101.114.102",
+      "country": "US",
+      "isp": "Cloudflare, Inc.",
+      "residential": false,
+      "suspected": false,
+      "native": false,
+      "ms": 6
+    },
+    {
+      "name": "🇺🇸 US · 机房 | Cloudflare Inc. | 59",
+      "type": "vmess",
+      "server": "141.101.114.20",
+      "country": "US",
+      "isp": "Cloudflare, Inc.",
+      "residential": false,
+      "suspected": false,
+      "native": false,
+      "ms": 6
+    },
+    {
+      "name": "🇺🇸 US · 机房 | Cloudflare Inc. | 60",
+      "type": "vmess",
+      "server": "188.114.99.137",
+      "country": "US",
+      "isp": "Cloudflare, Inc.",
+      "residential": false,
+      "suspected": false,
+      "native": false,
+      "ms": 6
     }
   ],
   "errors": [
@@ -724,13 +724,13 @@
       "error": "解析出 0 个节点"
     },
     {
-      "source": "aiboboxx-clashfree",
-      "url": "https://raw.githubusercontent.com/aiboboxx/clashfree/main/sub.yml",
+      "source": "a2470982985-getNode",
+      "url": "https://raw.githubusercontent.com/a2470982985/getNode/main/clash.yaml",
       "error": "解析出 0 个节点"
     },
     {
-      "source": "a2470982985-getNode",
-      "url": "https://raw.githubusercontent.com/a2470982985/getNode/main/clash.yaml",
+      "source": "aiboboxx-clashfree",
+      "url": "https://raw.githubusercontent.com/aiboboxx/clashfree/main/sub.yml",
       "error": "解析出 0 个节点"
     },
     {
@@ -759,14 +759,14 @@
       "error": "https://raw.githubusercontent.com/w1770946466/Auto_proxy/main/Long_term_subscription4.yaml -> HTTP 404"
     },
     {
-      "source": "Epodonios-All",
-      "url": "https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/All_Configs_Sub.txt",
-      "error": "https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/All_Configs_Sub.txt -> HTTP 404"
-    },
-    {
       "source": "barry-far-All",
       "url": "https://raw.githubusercontent.com/barry-far/V2ray-Configs/main/All_Configs_Sub.txt",
       "error": "https://raw.githubusercontent.com/barry-far/V2ray-Configs/main/All_Configs_Sub.txt -> HTTP 404"
+    },
+    {
+      "source": "Epodonios-All",
+      "url": "https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/All_Configs_Sub.txt",
+      "error": "https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/All_Configs_Sub.txt -> HTTP 404"
     },
     {
       "source": "soroush-mixed",
@@ -786,5 +786,5 @@
       "note": "公开学术实验项目，提供 OpenVPN/SSL-VPN，非 clash 协议；本项目单独产出 .ovpn 包。"
     }
   ],
-  "elapsed_s": 56.4
+  "elapsed_s": 52.0
 }
