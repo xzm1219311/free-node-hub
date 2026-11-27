@@ -65,6 +65,9 @@ def main() -> int:
             if str(x.get("type")).lower() not in allowed_types:
                 errors.append(f"{fn} 含 Clash 不支持的代理类型: {x.get('type')}")
                 break
+            if str(x.get("type")).lower() == "ssr" and not x.get("protocol"):
+                errors.append(f"{fn} 含缺少 protocol 的 SSR 节点: {x.get('name', '')}")
+                break
 
     p = os.path.join(sub, "singbox.json")
     if os.path.exists(p):
