@@ -57,9 +57,13 @@ def main() -> int:
             errors.append(f"{fn} 有重名节点（客户端会整份拒绝）")
         if not groups:
             errors.append(f"{fn} 没有 proxy-groups")
+        allowed_types = {"ss", "ssr", "vmess", "vless", "trojan", "hysteria", "hysteria2", "tuic", "anytls", "socks5", "http"}
         for x in proxies:
             if not x.get("type") or not x.get("server") or not x.get("port"):
                 errors.append(f"{fn} 有节点缺 type/server/port")
+                break
+            if str(x.get("type")).lower() not in allowed_types:
+                errors.append(f"{fn} 含 Clash 不支持的代理类型: {x.get('type')}")
                 break
 
     p = os.path.join(sub, "singbox.json")
