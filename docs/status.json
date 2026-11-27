@@ -1,17 +1,17 @@
 {
   "ok": true,
-  "updated_at": "2026-11-27 07:15:30",
-  "updated_ts": 1795763732,
+  "updated_at": "2026-11-27 07:21:50",
+  "updated_ts": 1795764112,
   "count": 600,
   "counts": {
     "clash": 600,
     "clash_lite": 600,
     "clash_ascii": 600,
-    "singbox": 562,
-    "base64": 562
+    "singbox": 561,
+    "base64": 561
   },
   "sources_ok": 39,
   "sources_total": 50,
   "repo": "xzm1219311/free-node-hub",
-  "elapsed_s": 69.3
+  "elapsed_s": 56.9
 }
