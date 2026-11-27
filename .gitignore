@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.cache/
+run*.log
+check_sources.py
+tests_parse.py
+.DS_Store
+
+# 本地临时文件（不要提交）
+.staging/
+docs/sub/*.tmp
+output/*.tmp
+*.zip
+.keepalive
