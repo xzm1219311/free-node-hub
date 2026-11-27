@@ -32,7 +32,7 @@ CLASH_KEEP = {
     "name", "type", "server", "port", "uuid", "username", "password", "cipher", "alterId",
     "network", "tls", "udp", "sni", "servername", "skip-cert-verify", "flow",
     "client-fingerprint", "alpn", "ws-opts", "grpc-opts", "h2-opts", "reality-opts",
-    "plugin", "plugin-opts", "obfs", "obfs-password", "up", "down", "ports",
+    "plugin", "plugin-opts", "obfs", "obfs-password", "protocol", "protocol-param", "obfs-param", "up", "down", "ports",
     "auth", "disable-sni", "reduce-rtt", "heartbeat-interval", "congestion-controller",
     "udp-relay-mode", "fingerprint", "ip-version", "packet-encoding",
 }
