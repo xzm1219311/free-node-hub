@@ -183,9 +183,12 @@ def validate(counts: dict) -> tuple[bool, str]:
         names = [x.get("name") for x in proxies]
         if len(set(names)) != len(names):
             return False, f"{fn} 有重名节点（客户端会拒绝整个订阅）"
+        allowed_types = {"ss", "ssr", "vmess", "vless", "trojan", "hysteria", "hysteria2", "tuic", "anytls", "socks5", "http"}
         for x in proxies:
             if not x.get("server") or not x.get("port") or not x.get("type"):
                 return False, f"{fn} 有节点缺 server/port/type"
+            if str(x.get("type")).lower() not in allowed_types:
+                return False, f"{fn} 含 Clash 不支持的代理类型: {x.get('type')}"
 
     try:
         sb = json.load(open(os.path.join(STAGE, "singbox.json"), encoding="utf-8"))
