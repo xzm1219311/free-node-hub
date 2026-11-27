@@ -317,10 +317,10 @@ def parse_clash_yaml(text: str, source: str = "") -> list[dict]:
         if not server or not port:
             continue
         if ptype not in ("vmess", "vless", "ss", "trojan", "hysteria2", "hysteria",
-                         "tuic", "ssr", "anytls"):
+                         "tuic", "ssr", "anytls", "socks", "socks5", "http"):
             continue
         node = dict(p)
-        node["type"] = ptype
+        node["type"] = "socks5" if ptype == "socks" else ptype
         node["server"] = str(server)
         node["port"] = port
         node["name"] = str(p.get("name") or f"{server}:{port}")
@@ -352,7 +352,7 @@ def parse_singbox_json(text: str, source: str = "") -> list[dict]:
         if not server or not port:
             continue
         node = {
-            "type": "vless" if t == "vless" else ("vmess" if t == "vmess" else t),
+            "type": "socks5" if t == "socks" else ("vless" if t == "vless" else ("vmess" if t == "vmess" else t)),
             "name": str(o.get("tag") or f"{server}:{port}"),
             "server": str(server), "port": port, "source": source,
         }
@@ -360,6 +360,8 @@ def parse_singbox_json(text: str, source: str = "") -> list[dict]:
             node["uuid"] = o["uuid"]
         if o.get("password"):
             node["password"] = o["password"]
+        if o.get("username"):
+            node["username"] = o["username"]
         if o.get("method"):
             node["cipher"] = o["method"]
         tls = o.get("tls") or {}
