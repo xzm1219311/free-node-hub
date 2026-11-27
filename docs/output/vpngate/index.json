@@ -1,10 +1,58 @@
 [
   {
     "file": "vpngate-US-01.ovpn",
+    "host": "vpn646885135",
+    "ip": "98.168.181.53",
+    "country": "US",
+    "speed_mbps": 225.08,
+    "ping_ms": 17
+  },
+  {
+    "file": "vpngate-US-02.ovpn",
+    "host": "vpn115726570",
+    "ip": "216.189.136.50",
+    "country": "US",
+    "speed_mbps": 152.94,
+    "ping_ms": 37
+  },
+  {
+    "file": "vpngate-US-03.ovpn",
+    "host": "vpn499446585",
+    "ip": "47.145.250.247",
+    "country": "US",
+    "speed_mbps": 113.48,
+    "ping_ms": 11
+  },
+  {
+    "file": "vpngate-US-04.ovpn",
     "host": "vpn481128042",
     "ip": "71.74.246.47",
     "country": "US",
     "speed_mbps": 96.37,
     "ping_ms": 25
+  },
+  {
+    "file": "vpngate-US-05.ovpn",
+    "host": "vpn360135615",
+    "ip": "38.42.52.163",
+    "country": "US",
+    "speed_mbps": 89.8,
+    "ping_ms": 26
+  },
+  {
+    "file": "vpngate-US-06.ovpn",
+    "host": "vpn680288952",
+    "ip": "47.25.225.222",
+    "country": "US",
+    "speed_mbps": 79.15,
+    "ping_ms": 22
+  },
+  {
+    "file": "vpngate-US-07.ovpn",
+    "host": "vpn519731163",
+    "ip": "50.47.26.15",
+    "country": "US",
+    "speed_mbps": 21.4,
+    "ping_ms": 4
   }
 ]
