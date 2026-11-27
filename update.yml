@@ -1,0 +1,115 @@
+name: 更新节点订阅
+
+on:
+  schedule:
+    # 主定时：每 3 小时一次（故意错开整点，整点是 GitHub 排队高峰，容易被延迟）
+    - cron: '17 */3 * * *'
+    # 兜底：每天再补一次，万一主定时那轮撞上故障
+    - cron: '43 6 * * *'
+  workflow_dispatch:          # 手动跑：仓库页面 -> Actions -> 更新节点订阅 -> Run workflow
+  push:
+    branches: [ main ]
+    # 只有改了代码才触发，避免自动更新自己触发自己
+    paths:
+      - 'main.py'
+      - 'src/**'
+      - 'tools/**'
+      - 'requirements.txt'
+      - '.github/workflows/**'
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: node-update
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: 拉取仓库
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0          # 每周压缩历史时需要完整历史
+
+      - name: 准备 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: 安装依赖
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: 采集并生成订阅
+        env:
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          PYTHONUNBUFFERED: "1"
+        run: python main.py
+
+      - name: 交付前自检
+        run: python tools/verify.py
+
+      - name: 生成运行摘要
+        if: always()
+        run: python tools/summary.py >> $GITHUB_STEP_SUMMARY
+
+      - name: 提交结果
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add output docs
+          if git diff --staged --quiet; then
+            echo "本轮无变化，跳过提交"
+            exit 0
+          fi
+          git commit -m "chore: 更新节点 $(date -u '+%m-%d %H:%M UTC')"
+          # 极端情况下远端有新提交，先 rebase 再推，避免整轮白跑
+          git pull --rebase --autostash origin main || true
+          git push || (sleep 5 && git push)
+
+      - name: 每周压缩一次提交历史
+        # 输出文件每 3 小时变一次，一年下来仓库会膨胀到几个 G 而打不开。
+        # 每周日 UTC 3 点前把历史压成一个提交，文件全保留，只丢掉旧历史。
+        run: |
+          set -e
+          if [ "$(date -u +%u)" != "7" ] || [ "$(date -u +%H)" -ge "4" ]; then
+            echo "本周不需要压缩"
+            exit 0
+          fi
+          SIZE=$(du -sm .git | cut -f1)
+          echo "当前 .git 体积 ${SIZE}MB"
+          if [ "$SIZE" -lt 60 ]; then
+            echo "体积还不大，跳过"
+            exit 0
+          fi
+          git checkout --orphan clean-main
+          git add -A
+          git commit -m "chore: 每周压缩历史 $(date -u '+%Y-%m-%d')"
+          git branch -D main || true
+          git branch -m main
+          git push -f origin main
+
+      - name: 上传 Pages 产物
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+          retention-days: 3
+
+  deploy:
+    needs: collect
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: 部署到 GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
