@@ -314,6 +314,12 @@ def main() -> int:
     log(f"采集完成：{len(nodes)} 原始 / {len(vpngate)} VPNGate")
     nodes = dedupe(nodes)
     nodes = [n for n in nodes if n.get("server") and n.get("port")]
+    # SSR 必须同时包含 protocol；缺失时 mihomo 会报 unset fields: protocol，整份订阅无法加载。
+    before = len(nodes)
+    nodes = [n for n in nodes if str(n.get("type", "")).lower() != "ssr" or n.get("protocol")]
+    dropped_ssr = before - len(nodes)
+    if dropped_ssr:
+        log(f"剔除 {dropped_ssr} 个缺少 protocol 的 SSR 节点")
     log(f"去重后：{len(nodes)}")
 
     cap = 400 if quick else config.MAX_PROBE_NODES
