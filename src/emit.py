@@ -29,7 +29,7 @@ FLAGS = {
 
 # Clash 节点允许保留的字段白名单（其余自定义键会被 mihomo 严格模式拒绝）
 CLASH_KEEP = {
-    "name", "type", "server", "port", "uuid", "password", "cipher", "alterId",
+    "name", "type", "server", "port", "uuid", "username", "password", "cipher", "alterId",
     "network", "tls", "udp", "sni", "servername", "skip-cert-verify", "flow",
     "client-fingerprint", "alpn", "ws-opts", "grpc-opts", "h2-opts", "reality-opts",
     "plugin", "plugin-opts", "obfs", "obfs-password", "up", "down", "ports",
@@ -105,6 +105,8 @@ def to_clash_node(node: dict, name: str) -> dict:
         if k in CLASH_KEEP and v is not None and v != "":
             out[k] = v
     out["name"] = name
+    if out.get("type") == "socks":
+        out["type"] = "socks5"
     t = out.get("type")
     if t in ("hysteria", "hysteria2", "tuic"):
         out.setdefault("skip-cert-verify", True)
