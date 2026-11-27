@@ -71,9 +71,10 @@ jobs:
             exit 0
           fi
           git commit -m "chore: 更新节点 $(date -u '+%m-%d %H:%M UTC')"
-          # 极端情况下远端有新提交，先 rebase 再推，避免整轮白跑
-          git pull --rebase --autostash origin main || true
-          git push || (sleep 5 && git push)
+          # Actions checkout 默认处于 detached HEAD；先同步远端，再明确把当前提交推到 main
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main || (sleep 5 && git push origin HEAD:main)
 
       - name: 每周压缩一次提交历史
         # 输出文件每 3 小时变一次，一年下来仓库会膨胀到几个 G 而打不开。
