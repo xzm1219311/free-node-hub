@@ -1,26 +1,26 @@
 [
   {
     "file": "vpngate-US-01.ovpn",
-    "host": "vpn680288952",
-    "ip": "47.25.225.222",
+    "host": "vpn100383739",
+    "ip": "128.211.249.131",
     "country": "US",
-    "speed_mbps": 112.8,
-    "ping_ms": 24
+    "speed_mbps": 97.57,
+    "ping_ms": 6
   },
   {
     "file": "vpngate-US-02.ovpn",
-    "host": "vpn392829260",
-    "ip": "96.38.137.97",
-    "country": "US",
-    "speed_mbps": 84.22,
-    "ping_ms": 24
-  },
-  {
-    "file": "vpngate-US-03.ovpn",
     "host": "vpn557600897",
     "ip": "173.66.239.174",
     "country": "US",
-    "speed_mbps": 74.15,
-    "ping_ms": 4
+    "speed_mbps": 71.26,
+    "ping_ms": 5
+  },
+  {
+    "file": "vpngate-US-03.ovpn",
+    "host": "vpn245816969",
+    "ip": "66.56.215.198",
+    "country": "US",
+    "speed_mbps": 18.84,
+    "ping_ms": 20
   }
 ]

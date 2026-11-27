@@ -1,18 +1,17 @@
 {
   "ok": true,
-  "updated_at": "2026-11-26 15:12:06",
-  "updated_ts": 1795754910,
-  "count": 800,
+  "updated_at": "2026-11-27 06:05:20",
+  "updated_ts": 1795759522,
+  "count": 600,
   "counts": {
-    "clash": 800,
-    "clash_lite": 800,
-    "clash_ascii": 800,
-    "singbox": 0,
-    "base64": 0
+    "clash": 600,
+    "clash_lite": 600,
+    "clash_ascii": 600,
+    "singbox": 574,
+    "base64": 574
   },
-  "sources_ok": 36,
-  "sources_total": 44,
-  "repo": "your-name/free-node-hub",
-  "elapsed_s": 141.0,
-  "note": "初始数据，下一轮 Actions 会覆盖"
+  "sources_ok": 39,
+  "sources_total": 50,
+  "repo": "xzm1219311/free-node-hub",
+  "elapsed_s": 63.2
 }
