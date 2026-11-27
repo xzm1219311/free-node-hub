@@ -65,16 +65,16 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          # Actions 默认是 detached HEAD。先切到远端 main，再生成提交，避免 detached HEAD 推送错误。
+          git fetch origin main
+          git switch -C main origin/main
           git add output docs
           if git diff --staged --quiet; then
             echo "本轮无变化，跳过提交"
             exit 0
           fi
           git commit -m "chore: 更新节点 $(date -u '+%m-%d %H:%M UTC')"
-          # Actions checkout 默认处于 detached HEAD；先同步远端，再明确把当前提交推到 main
-          git fetch origin main
-          git rebase origin/main
-          git push origin HEAD:main || (sleep 5 && git push origin HEAD:main)
+          git push origin main || (sleep 5 && git push origin main)
 
       - name: 每周压缩一次提交历史
         # 输出文件每 3 小时变一次，一年下来仓库会膨胀到几个 G 而打不开。
