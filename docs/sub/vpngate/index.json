@@ -1,10 +1,322 @@
 [
   {
-    "file": "vpngate-US-01.ovpn",
-    "host": "vpn391985756",
-    "ip": "50.35.89.231",
-    "country": "US",
-    "speed_mbps": 122.91,
+    "file": "vpngate-JP-01.ovpn",
+    "host": "public-vpn-58",
+    "ip": "219.100.37.49",
+    "country": "JP",
+    "speed_mbps": 644.45,
+    "ping_ms": 19
+  },
+  {
+    "file": "vpngate-JP-02.ovpn",
+    "host": "public-vpn-255",
+    "ip": "219.100.37.224",
+    "country": "JP",
+    "speed_mbps": 253.01,
+    "ping_ms": 30
+  },
+  {
+    "file": "vpngate-JP-03.ovpn",
+    "host": "public-vpn-225",
+    "ip": "219.100.37.219",
+    "country": "JP",
+    "speed_mbps": 202.55,
+    "ping_ms": 12
+  },
+  {
+    "file": "vpngate-JP-04.ovpn",
+    "host": "public-vpn-187",
+    "ip": "219.100.37.179",
+    "country": "JP",
+    "speed_mbps": 257.61,
+    "ping_ms": 15
+  },
+  {
+    "file": "vpngate-JP-05.ovpn",
+    "host": "public-vpn-208",
+    "ip": "219.100.37.166",
+    "country": "JP",
+    "speed_mbps": 267.23,
+    "ping_ms": 14
+  },
+  {
+    "file": "vpngate-JP-06.ovpn",
+    "host": "public-vpn-204",
+    "ip": "219.100.37.181",
+    "country": "JP",
+    "speed_mbps": 301.74,
+    "ping_ms": 14
+  },
+  {
+    "file": "vpngate-JP-07.ovpn",
+    "host": "public-vpn-211",
+    "ip": "219.100.37.168",
+    "country": "JP",
+    "speed_mbps": 224.36,
+    "ping_ms": 12
+  },
+  {
+    "file": "vpngate-JP-08.ovpn",
+    "host": "public-vpn-61",
+    "ip": "219.100.37.51",
+    "country": "JP",
+    "speed_mbps": 346.51,
+    "ping_ms": 12
+  },
+  {
+    "file": "vpngate-JP-09.ovpn",
+    "host": "public-vpn-138",
+    "ip": "219.100.37.117",
+    "country": "JP",
+    "speed_mbps": 254.63,
+    "ping_ms": 17
+  },
+  {
+    "file": "vpngate-JP-10.ovpn",
+    "host": "vpn576080304",
+    "ip": "126.145.125.132",
+    "country": "JP",
+    "speed_mbps": 149.95,
+    "ping_ms": 14
+  },
+  {
+    "file": "vpngate-JP-11.ovpn",
+    "host": "vpn679329164",
+    "ip": "131.129.254.126",
+    "country": "JP",
+    "speed_mbps": 151.7,
+    "ping_ms": 11
+  },
+  {
+    "file": "vpngate-KR-12.ovpn",
+    "host": "vpn918224196",
+    "ip": "14.47.248.47",
+    "country": "KR",
+    "speed_mbps": 206.4,
+    "ping_ms": 31
+  },
+  {
+    "file": "vpngate-JP-13.ovpn",
+    "host": "vpn609012261",
+    "ip": "60.236.15.105",
+    "country": "JP",
+    "speed_mbps": 39.88,
+    "ping_ms": 16
+  },
+  {
+    "file": "vpngate-KR-14.ovpn",
+    "host": "vpn305114740",
+    "ip": "121.187.145.64",
+    "country": "KR",
+    "speed_mbps": 94.09,
+    "ping_ms": 27
+  },
+  {
+    "file": "vpngate-JP-15.ovpn",
+    "host": "vpn517690502",
+    "ip": "118.156.174.68",
+    "country": "JP",
+    "speed_mbps": 3841.36,
+    "ping_ms": 3
+  },
+  {
+    "file": "vpngate-KR-16.ovpn",
+    "host": "vpn141353891",
+    "ip": "211.44.188.45",
+    "country": "KR",
+    "speed_mbps": 826.75,
+    "ping_ms": 28
+  },
+  {
+    "file": "vpngate-JP-17.ovpn",
+    "host": "laud",
+    "ip": "115.179.206.241",
+    "country": "JP",
+    "speed_mbps": 649.6,
+    "ping_ms": 14
+  },
+  {
+    "file": "vpngate-JP-18.ovpn",
+    "host": "vpn761093832",
+    "ip": "121.102.147.208",
+    "country": "JP",
+    "speed_mbps": 113.57,
+    "ping_ms": 23
+  },
+  {
+    "file": "vpngate-KR-19.ovpn",
+    "host": "vpn609211715",
+    "ip": "125.139.26.49",
+    "country": "KR",
+    "speed_mbps": 101.33,
+    "ping_ms": 28
+  },
+  {
+    "file": "vpngate-JP-20.ovpn",
+    "host": "public-vpn-71",
+    "ip": "219.100.37.25",
+    "country": "JP",
+    "speed_mbps": 283.35,
+    "ping_ms": 15
+  },
+  {
+    "file": "vpngate-JP-21.ovpn",
+    "host": "public-vpn-152",
+    "ip": "219.100.37.96",
+    "country": "JP",
+    "speed_mbps": 227.33,
+    "ping_ms": 10
+  },
+  {
+    "file": "vpngate-JP-22.ovpn",
+    "host": "vpn400336698",
+    "ip": "153.211.4.150",
+    "country": "JP",
+    "speed_mbps": 76.72,
+    "ping_ms": 13
+  },
+  {
+    "file": "vpngate-KR-23.ovpn",
+    "host": "vpn215791012",
+    "ip": "118.33.153.180",
+    "country": "KR",
+    "speed_mbps": 87.63,
+    "ping_ms": 34
+  },
+  {
+    "file": "vpngate-JP-24.ovpn",
+    "host": "vpn196889402",
+    "ip": "180.16.35.7",
+    "country": "JP",
+    "speed_mbps": 276.99,
+    "ping_ms": 17
+  },
+  {
+    "file": "vpngate-KR-25.ovpn",
+    "host": "vpn511477967",
+    "ip": "14.56.29.106",
+    "country": "KR",
+    "speed_mbps": 91.56,
+    "ping_ms": 33
+  },
+  {
+    "file": "vpngate-RO-26.ovpn",
+    "host": "opengw",
+    "ip": "217.138.212.62",
+    "country": "RO",
+    "speed_mbps": 547.43,
+    "ping_ms": 4
+  },
+  {
+    "file": "vpngate-JP-27.ovpn",
+    "host": "vpn898436612",
+    "ip": "126.108.68.175",
+    "country": "JP",
+    "speed_mbps": 371.79,
+    "ping_ms": 4
+  },
+  {
+    "file": "vpngate-JP-28.ovpn",
+    "host": "vpn494624299",
+    "ip": "133.32.224.158",
+    "country": "JP",
+    "speed_mbps": 92.45,
+    "ping_ms": 5
+  },
+  {
+    "file": "vpngate-JP-29.ovpn",
+    "host": "vpn291090802",
+    "ip": "118.106.120.218",
+    "country": "JP",
+    "speed_mbps": 629.0,
+    "ping_ms": 12
+  },
+  {
+    "file": "vpngate-JP-30.ovpn",
+    "host": "vpn479781942",
+    "ip": "126.110.76.239",
+    "country": "JP",
+    "speed_mbps": 164.29,
+    "ping_ms": 8
+  },
+  {
+    "file": "vpngate-KR-31.ovpn",
+    "host": "vpn736525607",
+    "ip": "118.222.200.243",
+    "country": "KR",
+    "speed_mbps": 83.55,
+    "ping_ms": 40
+  },
+  {
+    "file": "vpngate-JP-32.ovpn",
+    "host": "vpn434347232",
+    "ip": "27.113.251.242",
+    "country": "JP",
+    "speed_mbps": 136.6,
+    "ping_ms": 21
+  },
+  {
+    "file": "vpngate-KR-33.ovpn",
+    "host": "vpn409357059",
+    "ip": "115.94.203.131",
+    "country": "KR",
+    "speed_mbps": 93.52,
+    "ping_ms": 43
+  },
+  {
+    "file": "vpngate-JP-34.ovpn",
+    "host": "vpn228273615",
+    "ip": "175.131.69.138",
+    "country": "JP",
+    "speed_mbps": 527.16,
+    "ping_ms": 5
+  },
+  {
+    "file": "vpngate-JP-35.ovpn",
+    "host": "vpn982001769",
+    "ip": "126.131.47.52",
+    "country": "JP",
+    "speed_mbps": 64.76,
+    "ping_ms": 25
+  },
+  {
+    "file": "vpngate-KR-36.ovpn",
+    "host": "vpn812677596",
+    "ip": "221.167.26.145",
+    "country": "KR",
+    "speed_mbps": 90.4,
+    "ping_ms": 26
+  },
+  {
+    "file": "vpngate-KR-37.ovpn",
+    "host": "vpn966533712",
+    "ip": "59.6.114.202",
+    "country": "KR",
+    "speed_mbps": 338.63,
+    "ping_ms": 30
+  },
+  {
+    "file": "vpngate-JP-38.ovpn",
+    "host": "vpn825884935",
+    "ip": "1.21.33.211",
+    "country": "JP",
+    "speed_mbps": 36.82,
+    "ping_ms": 30
+  },
+  {
+    "file": "vpngate-TH-39.ovpn",
+    "host": "vpn113281460",
+    "ip": "58.136.231.111",
+    "country": "TH",
+    "speed_mbps": 540.36,
     "ping_ms": 6
+  },
+  {
+    "file": "vpngate-JP-40.ovpn",
+    "host": "vpn282454831",
+    "ip": "58.188.253.212",
+    "country": "JP",
+    "speed_mbps": 963.88,
+    "ping_ms": 5
   }
 ]
