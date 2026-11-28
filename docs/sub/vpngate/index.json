@@ -1,18 +1,18 @@
 [
   {
     "file": "vpngate-US-01.ovpn",
-    "host": "vpn799794865",
-    "ip": "135.180.93.53",
+    "host": "vpn543835186",
+    "ip": "72.196.67.191",
     "country": "US",
-    "speed_mbps": 631.09,
-    "ping_ms": 2
+    "speed_mbps": 525.88,
+    "ping_ms": 5
   },
   {
     "file": "vpngate-US-02.ovpn",
-    "host": "vpn468796700",
-    "ip": "104.174.50.60",
+    "host": "vpn387899464",
+    "ip": "173.79.106.163",
     "country": "US",
-    "speed_mbps": 44.62,
-    "ping_ms": 19
+    "speed_mbps": 170.79,
+    "ping_ms": 0
   }
 ]
